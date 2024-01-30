@@ -59,10 +59,6 @@ let addTwoNumsArrow = (num1, num2) => num1 + num2;
 let concatenateStringsArrow = (string1, string2) => string1 + ' ' + string2;
 
 
-
-
-
-
 // CODE BELOW IS COMPLETE - DO NOT EDIT
 
 // helper function for box 1, this accepts the user input and parses it into numbers and is called on the click of the submit button in the box
@@ -191,12 +187,15 @@ function helpCompareToHundred(e){
     document.getElementById("add3").nextElementSibling.classList.add("hidden");
 
     // validate input, complete function if valid, show error message if not
-    if(isNaN(number)){
+    if(isNaN(number))
+    {
         // input is not valid, show the error message
         document.getElementById("add3").nextElementSibling.classList.remove("hidden");
         // clear out any previous input from the output paragraph
         output.innerHTML = "";
-    }else{
+    }
+    else
+    {
         // call the function you wrote to do the comparison and store the result in a variable for displaying to the page
         let result = compareToHundred(number);
 	
@@ -212,7 +211,8 @@ function helpCompareToHundred(e){
 }
 
 // helper function for function expression 2, this gets the user input then calls the function expression you wrote to display the result to the screen
-function helpQuizAnswer(e){
+function helpQuizAnswer(e)
+{
 	// prevent default form submission
 	e.preventDefault();
 	
@@ -227,12 +227,15 @@ function helpQuizAnswer(e){
     console.log('select error span ', document.getElementById("answer").nextElementSibling)
 
     // check to be sure that the user has made a selection, show an error message if not
-    if(answer === ""){
+    if(answer === "")
+    {
         // this means that the user has not made a selection, ask them to do that
         document.getElementById("answer").nextElementSibling.classList.remove("hidden");
         // clear any previous output
         output.innerHTML = "";
-    }else{
+    }
+    else
+    {
         // in this case, the user chose from the list, tell them if it's correct or not
         // call the function you wrote to check the answer and store the result in a variable for displaying to the page
         let result = quizAnswer(answer);
@@ -268,7 +271,8 @@ function helpAddTwoNumsArrow(e){
     let isValid = true;
 
     // validate the first input, display error span if needed
-    if(isNaN(num1)){
+    if(isNaN(num1))
+    {
         // show the error span for this input
         document.getElementById("add5").nextElementSibling.classList.remove("hidden");
         // change boolean value
@@ -278,7 +282,8 @@ function helpAddTwoNumsArrow(e){
     }
 
     // validate second input, display error span if needed
-    if(isNaN(num2)){
+    if(isNaN(num2))
+    {
         // show the error span for this input
         document.getElementById("add6").nextElementSibling.classList.remove("hidden");
         // change boolean value
@@ -288,7 +293,8 @@ function helpAddTwoNumsArrow(e){
     }
 
 	// if the form inputs are valid, handle the functionality
-    if(isValid){
+    if(isValid)
+    {
         // call the function you wrote to do the math and store the result in a variable for displaying to the page
         let result = addTwoNumsArrow(num1, num2);
         
@@ -305,7 +311,8 @@ function helpAddTwoNumsArrow(e){
 }
 
 // helper function for box 9 - grabs the strings and calls the concatenateStrings method then outputs the result to the page
-function helpConcatenateStringsArrow(e){
+function helpConcatenateStringsArrow(e)
+{
 	// prevent default form submission
 	e.preventDefault();
 	
